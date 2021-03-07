@@ -1,0 +1,29 @@
+body, html { /*This part make the image was responsive*/
+    background-image: url(../img/hd.jpg); 
+    background-repeat:no-repeat;
+    height: 100vh;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+  }
+  
+  div.well{
+    height: 250px;
+  } 
+  
+  .Absolute-Center {
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+  }
+  
+  .Absolute-Center.is-Responsive {
+    width: 50vh; 
+    height: 50vh;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 20px;
+  }
+  

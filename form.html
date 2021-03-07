@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Mini Proyect JACR</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="javascript/AdhocsValidations.js" type="text/javascript"></script>
+  </head>
+  
+
+  <body onload="fnCallHomePage()"> <!--Aqui mandamos a llamar la funcion para la parte dinamica-->
+
+    <div class="sticky-top" id="rtnHomePage">
+      
+    </div>
+
+    <!--Inicio Form--------------------------------------------->
+    <div class="container">
+      <h2>Basic Form</h2>
+      <form method="POST"> <!--action="insertar.php" method="POST"-->
+
+        <div class="form-group">
+          <label for="text">Name:</label>
+          <input type="text" class="form-control" id="strName" placeholder="Enter Name" name="Name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" class="form-control" id="strEmail" placeholder="Enter email" name="Email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" class="form-control" id="strPassword" placeholder="Password" name="pwd">
+        </div>
+
+          <div class="form-group">
+             <label for="confirmPassword">Confirm Password:</label>
+             <input type="password" class="form-control" id="strConfirmPassword" placeholder="Confirm Password" min="0" name="confirmPwd">
+          </div>
+
+        <div class="form-group">
+          <label for="weight">Weight:</label>
+          <input type="number" class="form-control" step="any" id="doubWeight" onclick="fnImc()" onkeyup="fnImc()" placeholder="Weight" min="0" name="Sal">
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height:</label>
+            <input type="number" class="form-control" step="any" id="doubHeight" onclick="fnImc()" onkeyup="fnImc()" placeholder="Height" min="0" name="Incomes">
+        </div>
+
+        <div class="form-group">
+            <label for="total">Total:</label>
+            <input type="number" class="form-control" id="doubTotal" placeholder="Total" name="Total" disabled>
+        </div>
+        
+        <!-- <button type="submit" onclick="fnGetMessage()" class="btn btn-success">Accept</button>-->
+        <input type="button" onclick="fnPutInsertNewUser()" class="btn btn-success" value="Accept"> 
+        <button type="reset" class="btn btn-danger">Delete</button>
+
+      </form>
+    </div>
+    <!--Fin Form------------------------------------------------>
+
+    <!--inicio Modal ---------------------------------------------------->
+    <div id="mdlMessages" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+    
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="mdlMessagesTitle"></h4>
+          </div>
+          <div class="modal-body" id="mdlMessagesBody">
+            
+          </div>
+          <div class="modal-footer" id="mdlMessagesBtnAction">
+
+          </div>
+        </div>
+    
+      </div>
+    </div>
+    <!--Fin Modal ----------------------------------------------------->
+
+  </body>
+
+</html>
